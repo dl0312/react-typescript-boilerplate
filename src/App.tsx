@@ -1,52 +1,19 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./routes/Home";
 
-const Container = styled.main`
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-// This is example of styled-components with TypeScript or you can make interface of props
-const Header = styled("header")<{ toggleState: boolean }>`
-  background: linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: ${props =>
-    props.toggleState ? "transparent" : "black"};
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-`;
-
-// This is example of react-hooks with TypeScript
-function useToggle(defaultValue: boolean) {
-  const [toggleState, setToggleState] = useState(defaultValue);
-
-  function onMouseOver() {
-    setToggleState(true);
+class App extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        </BrowserRouter>
+      </React.Fragment>
+    );
   }
-
-  function onMouseOut() {
-    setToggleState(false);
-  }
-
-  return { toggleState, onMouseOver, onMouseOut };
-}
-
-function App() {
-  const toggle = useToggle(false);
-  return (
-    <Container className="App">
-      <Header {...toggle} className="App-header">
-        react, typescript, styled-components
-        <br />
-        boilerplate
-      </Header>
-    </Container>
-  );
 }
 
 export default App;

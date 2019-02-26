@@ -27,17 +27,6 @@ interface IChatMessage {
   message: string;
 }
 
-function useInput(defaultValue: string) {
-  const [value, setValue] = useState(defaultValue);
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      target: { value }
-    } = e;
-    setValue(value);
-  };
-  return { value, onChange };
-}
-
 function Home() {
   const [messages, setMessages] = useReducer((messages, { type, value }) => {
     switch (type) {
@@ -49,14 +38,13 @@ function Home() {
         return messages;
     }
   }, []);
-  const nameHooks = useInput("");
-  const messageHooks = useInput("");
-  const { value: name } = nameHooks;
-  const { value: message } = messageHooks;
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleGetNewMessage = (data: any) => {
     const { name, message } = data;
     setMessages({ type: "add", value: { name, message } });
+    setMessage("");
   };
 
   useEffect(() => {
@@ -75,8 +63,22 @@ function Home() {
           socket.emit("post_message", { name, message });
         }}
       >
-        <NameInput type="text" name="name" {...nameHooks} />
-        <MessageInput type="text" name="message" {...messageHooks} />
+        <NameInput
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setName(e.target.value)
+          }
+        />
+        <MessageInput
+          type="text"
+          name="message"
+          value={message}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setMessage(e.target.value)
+          }
+        />
         <SubmitBtn type="submit" value="Submit" />
       </ChatForm>
       <ChatList>

@@ -10,4 +10,42 @@ ${reset};
   * {
       box-sizing: border-box;
   }
+  body{
+    overflow: hidden;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  input{
+    border: none;
+    &:focus{
+      outline: none;
+    }
+  }
+  .player-wrapper {
+  position: relative;
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes expend {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;

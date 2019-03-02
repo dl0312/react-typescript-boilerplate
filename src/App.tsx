@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./routes/Home";
 import { GlobalStyle } from "./global-styles";
+import Home from "./routes/Home";
 
 class App extends React.Component {
   render() {

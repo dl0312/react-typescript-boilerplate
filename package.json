@@ -6,6 +6,7 @@
     "@types/socket.io-client": "^1.4.32",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-player": "^1.9.3",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",

@@ -8,7 +8,7 @@ Ideal method for creating React apps from beginning
 - React 16.8 (with Hooks)
 - React-dom 16.8
 - React-router 4.3
-- Styled-components 4.1
+- Styled-components 4.3
 
 ## Installation
 

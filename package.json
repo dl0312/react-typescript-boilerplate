@@ -19,7 +19,7 @@
     "@types/styled-components": "^4.1.19",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-react": "^1.1.7",
     "eslint-loader": "^3.0.2",

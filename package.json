@@ -6,7 +6,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.0",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
@@ -19,12 +19,9 @@
     "@types/styled-components": "^4.1.19",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
+    "eslint": "^6.8.0",
     "eslint-config-react": "^1.1.7",
     "eslint-loader": "^3.0.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
   },

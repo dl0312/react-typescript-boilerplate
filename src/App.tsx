@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { GlobalStyle } from './global-styles';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import { GlobalStyle } from "./global-styles";
+import styled from "styled-components";
 
 // This is example of styled-components
 const Container = styled.main`
@@ -13,11 +13,11 @@ const Container = styled.main`
 `;
 
 // This is example of styled-components with TypeScript or you can make interface of props
-const Header = styled('header')<{ toggleState: boolean }>`
+const Header = styled("header")<{ toggleState: boolean }>`
   background: linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   background-clip: text;
-  color: ${({ toggleState }) => (toggleState ? 'grey' : undefined)};
+  color: ${({ toggleState }) => (toggleState ? "grey" : undefined)};
   transition: 0.5s ease-in-out;
   font-size: 3rem;
   font-weight: 900;

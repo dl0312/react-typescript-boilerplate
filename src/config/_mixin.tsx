@@ -21,7 +21,7 @@ export const color = {
     mainColor: '#f6e58d',
   },
   default: {
-    bgColor: '#ffffff',
+    bgColor: '#efefef',
     fontColor: '#14181C',
     mainColor: '#f6e58d',
   },

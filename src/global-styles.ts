@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     Use the following CSS rules to specify these families:
     font-family: 'Black Han Sans', sans-serif;
   */
-  @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Black+Han+Sans|Do+Hyeon|Song+Myung|Nanum+Myeongjo|Nanum+Pen+Script");
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');  
   * {
       box-sizing: border-box;
   }
@@ -52,7 +52,6 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none !important;
     &:hover{
         color: ${color.default.mainColor};
-        color: ${color.darkmode.mainColor};
     }
   }
 
@@ -62,8 +61,6 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
     border: none;
     &:active {
-      outline: none;
-      border: none;
     }
   }
 

@@ -1,5 +1,7 @@
 import { createGlobalStyle } from './typed-components';
 import { fontSize, color, media } from './config/_mixin';
+import 'react-toastify/dist/ReactToastify.min.css';
+
 export const GlobalStyle = createGlobalStyle`
   /*
     normalize.css - https://necolas.github.io/normalize.css/

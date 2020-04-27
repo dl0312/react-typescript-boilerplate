@@ -93,7 +93,9 @@ Ideal method for creating React apps from beginning
   "jsRules": {},
   "rules": {
     "quotemark": false,
-    "ordered-imports": false
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "member-access": false
   },
   "rulesDirectory": []
 }

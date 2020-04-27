@@ -1,58 +1,32 @@
-import React, { useState } from "react";
-import { GlobalStyle } from "./global-styles";
-import styled from "styled-components";
+import React from 'react';
+import { HashRouter } from 'react-router-dom';
+import Router from './Router';
+import { GlobalStyle } from './global-styles';
+import { ToastContainer } from 'react-toastify';
+import styled from 'styled-components';
+import ScrollToTop from './components/ScrollToTop';
 
-// This is example of styled-components
-const Container = styled.main`
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+const AppContainer = styled.div``;
 
-// This is example of styled-components with TypeScript or you can make interface of props
-const Header = styled("header")<{ toggleState: boolean }>`
-  background: linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: ${({ toggleState }) => (toggleState ? "grey" : undefined)};
-  transition: 0.5s ease-in-out;
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-`;
-
-// This is example of react-hooks with TypeScript
-function useToggle(defaultValue: boolean) {
-  const [toggleState, setToggleState] = useState(defaultValue);
-
-  function onMouseOver() {
-    setToggleState(true);
-  }
-
-  function onMouseOut() {
-    setToggleState(false);
-  }
-
-  return { toggleState, onMouseOver, onMouseOut };
-}
-
-function App() {
-  const toggle = useToggle(false);
+const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
-      <Container className="App">
-        <Header {...toggle} className="App-header">
-          react, typescript, styled-components
-          <br />
-          boilerplate
-        </Header>
-      </Container>
+      <ToastContainer
+        draggable={true}
+        position={'bottom-right'}
+        autoClose={5000}
+        pauseOnHover={true}
+      />
+      <HashRouter>
+        <ScrollToTop>
+          <AppContainer className="app">
+            <Router />
+          </AppContainer>
+        </ScrollToTop>
+      </HashRouter>
     </>
   );
-}
+};
 
 export default App;

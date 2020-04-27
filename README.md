@@ -15,6 +15,23 @@ Ideal method for creating React apps from beginning
 
 ## 🔧 Config files
 
+### 🖋 title
+타이틀 수정을 위해서는 [index.html](/public/index.html)에서 현재 `React-TypeScript-Boilerplate`로 되어있는 부분들을 고쳐야합니다.
+```html
+<meta
+  name="apple-mobile-web-app-title"
+  content="React-TypeScript-Boilerplate"
+/>
+```
+```html
+<title>React-TypeScript-Boilerplate</title>
+```
+
+### 🦞 favicon
+파비콘 수정을 위해서는 [asset](/public/asset)에 있는 기존의 이미지 파일들을 대체해야합니다. (현재는 🦞 이모지로 되어있습니다.)
+
+[FAVIC-O-MATIC](https://favicomatic.com/)에 접속하여 `Every damm size,sir!`를 선택하고 `Upload Your Image` 버튼을 클릭하여 필요한 이미지 파일이 들어있는 압축파일을 받습니다.
+
 ### 📄 .eslintrc.json
 
 ```json

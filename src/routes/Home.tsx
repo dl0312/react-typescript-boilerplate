@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { GlobalStyle } from '../global-styles';
 import styled from 'styled-components';
 import { toast } from 'react-toastify';
-import { Theme } from '../interfaces';
 import ThemeToggleSwitch from '../components/ThemeToggleSwitch';
 
 // This is example of styled-components

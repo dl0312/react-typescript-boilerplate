@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { createContext } from 'react';
 import { HashRouter } from 'react-router-dom';
 import Router from './Router';
 import { GlobalStyle } from './global-styles';
@@ -7,14 +7,15 @@ import styled, { ThemeProvider } from 'styled-components';
 import ScrollToTop from './components/ScrollToTop';
 import { Theme } from './interfaces';
 import { themeList } from './config/_mixin';
+import { useDarkMode } from './hooks/useDarkMode';
 
 const AppContainer = styled.div``;
 export const ThemeContext = createContext({});
 
 export default function App() {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+  const [theme, toggleTheme] = useDarkMode(Theme.LIGHT);
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ThemeProvider
         theme={theme === Theme.LIGHT ? themeList.light : themeList.dark}
       >

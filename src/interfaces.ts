@@ -9,6 +9,6 @@ export interface IThemeInterface {
 }
 
 export enum Theme {
-  LIGHT,
   DARK,
+  LIGHT,
 }

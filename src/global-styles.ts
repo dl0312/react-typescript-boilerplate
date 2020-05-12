@@ -1,8 +1,10 @@
-import { createGlobalStyle } from './typed-components';
+import { createGlobalStyle } from 'styled-components';
 import { fontSize, color, media } from './config/_mixin';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { IThemeInterface } from './interfaces';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<IThemeInterface>`
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/antd/4.1.1/antd.min.css");
   /*
     normalize.css - https://necolas.github.io/normalize.css/
   */
@@ -24,18 +26,25 @@ export const GlobalStyle = createGlobalStyle`
     Use the following CSS rules to specify these families:
     font-family: 'Black Han Sans', sans-serif;
   */
-  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');  
-  * {
-      box-sizing: border-box;
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
   }
 
   body{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: ${fontSize.normalFontSize};
-    /* background-color: ${color.default.bgColor};
-    color: ${color.default.fontColor}; */
-    background-color: ${color.darkmode.bgColor};
-    color: ${color.darkmode.fontColor};
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: all 0.5s ease-in-out;
+    /* Responsive Design */
     ${media.giant} {
       /* Giant View */
     }

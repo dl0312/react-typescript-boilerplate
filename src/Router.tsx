@@ -6,6 +6,7 @@ import Home from './routes/Home';
 import Header from './components/Header';
 
 const MainContainer = styled.main`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

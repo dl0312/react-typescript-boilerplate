@@ -12,6 +12,7 @@
 | react-scripts            | **3.3**    |
 | styled-components        | **^4.4**   |
 | typescript               | **3.6**    |
+| antd                     | **4.1.5**  |
 
 ## 🔧 설정 파일들
 

@@ -1,14 +1,13 @@
 import React, { createContext } from 'react';
 import { HashRouter } from 'react-router-dom';
+import { BackTop } from 'antd';
+import { ToastContainer } from 'react-toastify';
 import Router from './Router';
 import { GlobalStyle } from './global-styles';
-import { ToastContainer } from 'react-toastify';
-import styled from 'styled-components';
 import ScrollToTop from './components/ScrollToTop';
 import { Theme } from './interfaces';
 import { themeList } from './config/_mixin';
 import { useDarkMode } from './hooks/useDarkMode';
-import { BackTop } from 'antd';
 
 export const ThemeContext = createContext<{
   theme: Theme;

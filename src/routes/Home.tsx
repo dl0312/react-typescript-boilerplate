@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { GlobalStyle } from '../global-styles';
 import styled from 'styled-components';
 import { toast } from 'react-toastify';
 import ThemeToggleSwitch from '../components/ThemeToggleSwitch';
@@ -10,32 +9,34 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 10rem 0;
+  align-items: flex-start;
+  padding: 1rem;
 `;
 
 // This is example of styled-components with TypeScript or you can make interface of props
 const Content = styled.div`
   font-size: 3rem;
   font-weight: 900;
-  text-transform: uppercase;
+  margin: 1rem 0;
 `;
 
 export default function Home() {
   useEffect(() => {
     toast('🦄 Welcome to React TypeScript Boilerplate!');
   }, []);
+
   return (
-    <>
-      <GlobalStyle />
-      <Container className="App">
-        <ThemeToggleSwitch />
-        <Content>
-          react, typescript, styled-components
-          <br />
-          boilerplate
-        </Content>
-      </Container>
-    </>
+    <Container className="App">
+      <ThemeToggleSwitch />
+      <Content>
+        React,
+        <br />
+        TypeScript,
+        <br />
+        styled-components
+        <br />
+        Boilerplate
+      </Content>
+    </Container>
   );
 }

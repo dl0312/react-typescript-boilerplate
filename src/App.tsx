@@ -7,7 +7,7 @@ import { GlobalStyle } from './global-styles';
 import ScrollToTop from './components/ScrollToTop';
 import { Theme } from './interfaces';
 import { themeList } from './config/_mixin';
-import { useDarkMode } from './hooks/useDarkMode';
+import useDarkMode from './hooks/useDarkMode';
 
 export const ThemeContext = createContext<{
   theme: Theme;

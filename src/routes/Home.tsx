@@ -29,11 +29,13 @@ export default function Home() {
     <Container className="App">
       <ThemeToggleSwitch />
       <Content>
-        React,
+        React
         <br />
-        TypeScript,
+        TypeScript
         <br />
         styled-components
+        <br />
+        Ant Design
         <br />
         Boilerplate
       </Content>
